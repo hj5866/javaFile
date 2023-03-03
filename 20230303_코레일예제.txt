@@ -1,0 +1,118 @@
+package classEx;
+
+public class ScoreEx {
+   //멤버변수 : 일반형(String timeType)
+   //나이(int age)
+   //날짜(String date)
+   //이름(String name)              
+   //정가(int price)
+   String timeType;
+   int age;
+   String date;
+   String name;
+   int price;
+   
+   //메서드
+   public String getTimeType() {
+      return timeType;
+   }
+   public int getAge() {
+      return age;
+   }
+   public String getDate() {
+      return date;
+   }
+   public String getName() {
+      return name;
+   }
+   public int getPrice() {
+      return price;
+   }
+   //나이에 따른 유형 선택하는 메서드
+   public String getHuman() {
+      String human="";
+      //나이가 19세 이상이면 어른, 아니면 청소년으로 구분
+      if(age>=19) {
+         human="어른";
+      }else {
+         human="청소년";
+      }
+      return human;
+   }
+   //할인율에 따른 할인가격을 구하는 메서드, 일반형과 기간자유형, 어른과 청소년
+   //10일용, 1개월용, 10일~20일, 21일~1개월, 10일~1개월
+   //45%, 50%, 60%
+   public double getRate() {
+      double rate=0.0;      
+      
+      if(timeType=="일반형") {
+         //getHuman()함수 호출하고 그 결과값을 "어른"과 비교
+         if(getHuman()=="어른") {
+            if(date=="10일용") {
+               rate=0.45;
+            }else if(date=="1개월용") {
+               rate=0.5;
+            //일반형->어른->10일용도 아니고 1개월용도 아니면   
+            }else {
+               rate=0.0;
+            }
+         //일반형->청소년 인 경우   
+         }else {
+            rate=0.6;
+         }
+      }else if(timeType=="기간자유형"){
+         if(getHuman()=="어른") {
+            if(date=="10일~20일") {
+               rate=0.45;
+            }else if(date=="21일~1개월") {
+               rate=0.5;
+            }else {
+               rate=0.0;
+            }
+         //기간자유형->청소년   
+         }else {
+            rate=0.6;
+         }
+      //일반형도 아니고, 기간자유형도 아닌 경우   
+      }else {
+         rate=0.0;         
+      }      
+      return rate;
+   }
+   public double getDiscount() {
+      double discount=0.0;
+      //할인율을 적용한 할인가 구하기
+      discount = price - ( price * getRate());
+      return discount;
+   }
+   
+   
+   
+   public static void main(String[] args) {
+      //인스턴스 생성
+      ScoreEx score=new ScoreEx();
+      //인스턴스의 멤버변수 초기화
+      score.timeType="일반형";
+      score.age=23;
+      score.date="10일용";
+      score.name="이미주";
+      score.price=59800;
+      
+      //인스턴스 멤버변수의 값 콘솔에 출력
+      System.out.println("유형:"+score.getTimeType());
+      System.out.println("나이:"+score.getAge()+"세");
+      System.out.println("구분:"+score.getHuman());
+      System.out.println("날짜:"+score.getDate());
+      System.out.println("이름:"+score.getName()+"님");
+      System.out.println("정가:"+score.getPrice()+"원");
+      System.out.println("할인율:"+(int)(score.getRate()*100)+"%");
+      System.out.println("할인가:"+(int)score.getDiscount()+"원");
+//        
+//계산값
+//사람(String human)*
+//할인율(int rate)*
+//할인가(int discount)*
+
+   }
+
+}
