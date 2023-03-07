@@ -1,0 +1,27 @@
+package array;
+
+public class CharArray {
+
+   public static void main(String[] args) {
+      char[] alpha = new char[26];
+      char ch='a';
+      //소문자 배열값 출력
+      for(int i=0; i<alpha.length; i++) {
+         //ch:문자형인 alpha배열의 값을 암묵적으로 
+         //정수형으로 변환한 다음 1씩 증가시킴
+         alpha[i]=ch++;
+         System.out.println(alpha[i] + ","+(int)ch);
+      }
+      System.out.println("============");
+      //대문자로 변환하여 배열에 저장한 다음 콘솔에 출력
+      for(int i=0; i<alpha.length; i++) {
+         //정수형으로 변환된 alpha배열의 값에서 32를 
+         //뺀 결과값을 변수 k에 저장
+         int k=(int)alpha[i]-32;
+         //alpha배열에 k값을 문자형으로 변환하여 저장
+         alpha[i]=(char)(k);
+         System.out.println(alpha[i] + ","+k);
+      }
+   }
+
+}
