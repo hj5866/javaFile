@@ -1,0 +1,98 @@
+
+1. 네트워크 명령어 문제 2개 :모듈교재1장 ((ping))
+nslookup(ip확인하는 명령어)-10페이지
+ipconfig /all (nic설정정보찾기) - 교재13페이지
+ping(네트워크 연결 상태,접속하고자 하는 시스템의 ip또는 url을 입력) -14페이지
+tracert(라우터 확인)-14페잉지
+
+2. 미들웨어-정부프레임워크 1문제 :모듈교재 2장
+
+3. Mysql - 데이터베이스 생성,테이블 생성,수정,삭제,질의어 7문제(혹은6문제):모듈교재3장
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@
+외래키있는 테이블이 자식!!!
+
+필수라는 말 들어가면 실선(새다리) 없으면 점선!!!!
+
+view 잘못 만들면 drop view 해서 지운뒤 create view 해서 다시 만들어서 봐야함!!
+------------------------------------------------------------------------
+(order2db view 만드는 코드)
+create view 뷰 이름(v_가져올 테이블) as select 테이블.필드 from 가져올 테이블 inner join 가져올 테이블2
+on 조건
+-> 조건부 뷰 생성
+
+create view v_order2TBL -- 뷰 테이블 이름
+as select //G.guestID, -- 출력하고싶은 데이터(합칠것)
+G.guestName,
+O.orderProduct,
+O.amount,
+O.price,
+O.orderDate
+from// guesttbl G -- from, inner join에 합칠 테이블 이름 쓰기, 순서 중요.
+inner join// ordertbl O
+on //G.guestID=O.orderName; -- 폴인키(FK),PK 순서 바뀌어도된다.
+
+select*from v_order2TBL;
+
+-- 뷰 생성2
+create view viewTBL as
+select E.exName , E.exAddr, E2.ex2Product,
+E2.ex2Amount from exTBL E, ex2TBL E2
+where E.exName=E2.ex2Name;
+----------------------------------------------------------------------------
+foreingnkey 추가하는 키워드
+예)alter table //ordertbl(자식테이블)
+add foreign key(orderName)
+references //guesttbl(guestID);
+
+-- PK와 FK의 연동
+alter table ex2tbl add foreign key(ex2Name)references extbl(exName); 
+-- ex2tb1자식테이블, ex2Name자식테이블의 fk
+-- exname프라이머리 키, extb1부모테이블
+
+--------------------------------------------------------------------------------
+SELECT * FROM guesttbl;
+
+-- update set 값 새로 설정하기 
+update guesttbl set gname='박보검' where gname='권혜정';
+update guesttbl set addr='광주' where gname='박보검';
+update guesttbl set gdate='2023-5-25' where gname='박보검';
+
+--레코드 값 삭제하기
+delete from 테이블이름 where 필드이름=데이터값
+ex)delete from buytbl where num = 3;
+
+-- 값 추가하기
+insert into guesttbl(gname,addr,gdate) values ('수지','부산','2022-1-1');
+
+#userTBL에서 생일이 1970이후인 userID와 userName출력하기
+select userID,userName from userTBL where birthYear>=1970;
+
+#userTBL에서 주소가 서울,인천,경기 중에 속한 데이터를 조회해서 userName,addr만 보여주기
+select userName, addr from usertbl where addr in('서울','인천','경기');
+
+# userTBL에서 이름에'김'이 포함된 레코드만 출력
+select*from usertbl where userName like '%김%';
+
+# userTBL에서 주소가 서울이고 키가 173이상인 레코드 조회alter
+# userID,userName,height만 나오게
+select userID,userName,height from userTBL where addr='서울'and height>=173;
+
+-- 정렬
+select row_number() over(order by tall)"키큰순위", talname,tall from talltbl;
+select rank() over(order by tall desc)"키큰순위",talname,tall from talltbl;
+
+-- alter table buyTBL add (etc char(10)); 구조를 바꿀때 쓴다.(alter)
+alter table guesttbl drop addr; -> guesttbl의 addr의 열을 삭제한다
+alter table guesttbl add COLUMN gnum int not Null;
+select*from guesttbl;
+
+------------------------------------------------------------------------------------------
+apply할때 나오는 질의어 복사해서 한글파일에 복붙하기.
+
+레코드삭제,수정...
+8문제...
+
+jsf링크거는거 20점...
+
+<jsp:include page= "파일명"></jsp:include>  // include포함하다.................

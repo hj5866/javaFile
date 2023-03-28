@@ -1,0 +1,42 @@
+use 테이블
+-> 테이블 호출
+
+select 필드 from 테이블 
+-> 테이블 내의 필드 호출
+
+select 필드 from 테이블 where 조건
+-> 테이블 내의 조건에 해당하는 필드 호출
+
+update 테이블 set 필드 where 조건 -0323-1
+-> 테이블 내의 조건에 해당하는 필드 업데이트
+
+delete from 테이블 where 조건
+-> 테이블 내의 조건에 해당하는 필드 삭제
+
+select row_number() from 테이블 -0324-1 
+-> 테이블 오름차순 정렬
+
+create view 뷰 이름(v_가져올 테이블) as select 테이블.필드 from 가져올 테이블 inner join 가져올 테이블2
+on 조건
+-> 조건부 뷰 생성
+
+drop view 뷰 이름
+-> 뷰 삭제
+
+view : 가상테이블
+-> (실제로 물리적인 저장장치에는 저장되지 않으나 테이블 볼 수 있고, 생성, 수정, 추가 가능)
+가상 테이블을 만든 원본 테이블이 지워지면 가상 테이블도 지워짐
+
+원본 테이블에는 접근 못하게 하고 가상 테이블로 사용자가 원하는 정보를 보여줌(보안)
+
+alter table 테이블 add(조건)
+->구조를 바꿈
+
+alter table 테이블 drop 조건
+->구조를 삭제
+
+DDL: create(생성) ,alter(테이블의 구조 수정), drop(테이블삭제)
+DML: select, update, delete(레코드 삭제), insert
+
+
+셤 나오는거:임포트 익스포트 
