@@ -1,0 +1,12 @@
+시험날, 뷰 만들라는 문제 나오면 명령 프롬프트로 권한 부여 받아서 토드 켜야함
+
+1.grant create view to scott; 
+2.grant create synonym to scott;
+3.grant create public synonym to scott;
+
+
+제약조건
+
+조건 조회
+select*from user_constraints; 
+
