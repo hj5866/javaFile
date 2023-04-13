@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>교재 65페이지-표와 캡션</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th,td{border: 1px solid #000;}
+    </style>
+</head>
+<body>
+    <table>
+        <!-- 표에 대한 설명 -->
+        <caption>상품에 따른 상하반기 판매량</caption>
+        <!-- 테이블의 제목 영역 -->
+        <thead>
+            <tbody>
+            <tr>
+                <!-- th:글씨가 두껍게 나옴 -->
+                <!-- col:열 -->
+                <th scope="col">구분</th>
+                <th scope="col">데스크탑 PC</th>
+                <th scope="col">스마트폰</th>
+            </tr>
+        </thead>
+        <!-- 테이블의 body(본문)영역 -->
+            <tr>
+                <!-- row:행 -->
+                <th scope="row">상반기 판매수</th>
+                <td>2만대</td>
+                <td>5만대</td>
+            </tr>
+            <tr>
+                <th scope="row">하반기 판매수</th>
+                <td>3만대</td>
+                <td>7만대</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

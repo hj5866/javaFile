@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그(from 중요함)</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h1>데이터베이스와 연동하는 폼 태그 종류</h1>
+    <!-- from 태그들은 <form></form>사이에 작성함 -->
+    <form action="" oninput="res.value=parseInt(a.value)+parseInt(b.value)">
+        <!-- 입력 태그 -->
+        <label for="">아이디:</label>
+        <input type="text" placeholder="아이디">
+        <br>
+        <label for="">비밀번호:</label>
+        <!-- placeholder:입력창에 아이디,비밀번호 적으면 텍스트 사라짐 -->
+        <!-- type:password 이기 때문에 비밀번호 적을때 노출이 되지 않는다. -->
+        <input type="password" placeholder="비밀번호">
+        <br>
+        <label for="">성별:</label>
+        <!-- radio타입: 여러개 중 반드시 한 개 선택해야함 -->
+        <!-- name이 같아야 같은 그룹이 됨 -->
+        <!-- checked남 뜻은: 초기값. 처음 키면 체크되어있음 -->
+        <input type="radio" name="gender" value="m" checked>남
+        <input type="radio" name="gender" value="f">여
+        <br>
+        <label for="">취미:</label>
+        <!-- checkbox타입 : 여러 개 중 선택 가능 -->
+        <!-- name이 같아야 같은 그룹이 됨 -->
+        <!-- value :같은 그룹 안에서 다른 값 선택 -->
+        <input type="checkbox" name="hobby" value="movie">영화
+        <input type="checkbox" name="hobby" value="music">음악
+        <input type="checkbox" name="hobby" value="book">독서
+        <input type="checkbox" name="hobby" value="travel">여행
+        <br>
+        <!-- 달력 넣기 -->
+        <!-- 달력 하나 한번에 넣기 -->
+        <label for="">생일:</label>
+        <input type="date"><br>
+        <!-- 따로 넣기 -->
+        <select>
+            <option value="">연도</option>
+            <option value="1999">1999</option>
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+        </select>년
+        <select>
+            <option value="">월</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>월
+        <select>
+            <option value="">일</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>일<br>
+        <label for="">자기소개</label><br>
+        <!-- cols속성: 한 줄에 입력되는 글자 수 -->
+        <!-- rows속성: 박스에 표시되는 줄 수 -->
+        <textarea cols="50" rows="7" placeholder="자기 소개를 200자 이내로 작성해 보세요" style="resize: none;"></textarea>
+        <br>
+        <label for="">숫자 증감:</label>
+        <input type="number" max="10" min="0" step="2" value="0">
+        <br>
+        <label for="">출력 영역 지정</label>
+        0<input type="range" value="50" id="a" name="a">100+
+        <input type="number" value="50" id="b" name="b">=
+        <output for="a b" name="res"></output> 
+        <br><br><br><br><br><br><br><br><br>
+
+    </form>
+    
+</body>
+</html>
