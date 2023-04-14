@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 관련 스타일 지정</title>
+    <!-- 내부 스타일 시트 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Nanum+Pen+Script&family=Stylish&display=swap');
+
+        @font-face {
+        font-family: 'NeoDunggeunmoPro-Regular';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/NeoDunggeunmoPro-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+}  
+        /* 태그 선택자- 모든 p태그에 스타일 적용 */
+        p {color:blue;}
+        /* 클래스 선택자:.(도트)로 선택함 */
+        p.txt2{
+            font-weight: bold; /*진하게,굵게*/
+        }
+        p.txt3{
+            font-style: italic; /*기울임*/ /*normal 쓰면 기울어진거 세움*/
+        }
+        p.txt4{
+            line-height: 100px; /*줄간격*/
+        }
+        p.txt5{
+            font:bold 30px/1.4 'Times New Roman',Times, serif;
+        }
+        p.txt6{
+            color: #e11299;
+        }
+        p.txt7{
+            font-size: 40px;
+        }
+        p.txt8{
+            letter-spacing: 5px; /*자간*/
+        }
+        p.txt9{
+            letter-spacing: -5px;
+        }
+        p.txt10{
+            word-spacing: 10px; /*단어 사이 간격*/
+        }
+        p.txt11{
+            text-decoration: underline; /*밑줄*/
+        }
+        p.txt12{
+            text-decoration: line-through; /*취소선*/
+        }
+        p.txt13{
+            text-shadow: 1px 2px 2px orange; /*그림자*/ /*x방향과 거리,y방향과 거리,번짐효과,색*/
+            font-size: 30px;
+        }
+        p.txt14{
+            text-shadow: 10px -5px 4px orange;
+            font-size: 30px;
+        }
+        /* 웹폰트- 구글웹폰트, 눈누웹폰트 */
+        p.txt15{
+            font-family: 'Dongle', sans-serif;
+            font-size: 50px; 
+        }
+        p.txt16{
+            font-family: 'NeoDunggeunmoPro-Regular';
+            font-size: 50px; 
+        }
+    </style>
+</head>
+<body>
+    <p class="txt1">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt2">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt3">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt4">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt5">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt6">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt7">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt8">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt9">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt10">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt11">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt12">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt13">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt14">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt15">오늘은 금요일! 즐거운 주말입니다.</p>
+    <p class="txt16">오늘은 금요일! 즐거운 주말입니다.</p>
+</body>
+</html>

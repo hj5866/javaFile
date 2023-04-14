@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단위-교재 122페이지</title>
+    <style>
+        /* 클래스 선택자 */
+        .box{
+            font-size: 20px; /*절대크기*/
+        }
+        .area{
+            font-size: 1.5em; /*부모객체의 가로크기 기준 1.5배 - 상대크기*/
+        }
+        .box1{
+            font-size: 20px;
+        }
+        .area1{
+            font-size: 150%; /*상대크기*/
+        }
+        .box2{
+            font-size:10px;
+        }
+        .area2{
+            font-size:2rem; /*root기준(부모를 기준으로 하는게 아니고 body를 기준으로 한다.) 상대크기,root는 기본크기 16px*/
+        }
+        .box3{
+            font-size: 2vw; /*브라우저의 가로길이 기준*/
+        }
+        .area3{
+            font-size: 2vh; /*브라우저의 세로길이 기준*/
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>box영역 안의 글자</h1>
+        <div class="area">
+            <h1>area 영역 안의 글자</h1>
+        </div>
+    </div>
+    <div class="box1">
+        <h1>box1영역 안의 글자</h1>
+        <div class="area1">
+            <h1>area1 영역 안의 글자</h1>
+        </div>
+    </div>
+    <div class="box2">
+        <h1>box2영역 안의 글자</h1>
+        <div class="area2">
+            <h1>area2 영역 안의 글자</h1>
+        </div>
+    </div>
+    <div class="box3">
+        <h1>box3영역 안의 글자</h1>
+        <div class="area3">
+            <h1>area3 영역 안의 글자</h1>
+        </div>
+    </div>
+</body>
+</html>

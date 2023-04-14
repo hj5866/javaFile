@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:none과 visibility:hidden</title>
+    <style>
+        /*모든 div에 스타일 적용-태그 선택자 */
+        div{
+            width: 400px;
+            height: 200px;
+            background-color: #ddd;
+            margin: 10px auto;
+        }
+        /* 모든 자식 객체에 스타일 적용-태그 선택자, 하위선택자 */
+        div div{
+            width: 170px;
+            height: 170px;
+            background-color: yellow;
+            float: left; /*가로로 나열*/
+            margin-left: 20px;
+        }
+        /* 부모 영역에서 두번째 자식 객체들에 스타일 적용 */
+        div div:last-child{
+            background-color: #9df1df;
+        }
+        /* box1에 마우스 오버하면 첫번째 자식 객체 사라짐 */
+        .box1:hover .child1{
+            display: none;
+        }
+        /* box2에 마우스 오버하면 첫번째 자식 객체 사라짐 */
+        .box2:hover .child1{
+            visibility: hidden; /*애니메이션 적용 안됨*/
+            transition: all 1s;
+        }
+        /* box3에 마우스 오버하면 첫번째 자식 객체 사라짐 */
+        .box3:hover .child1{
+            opacity: 0; /*투명도-서서히 사라짐*/
+            transition: all 1s; /*애니메이션 적용됨*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="child1">첫번째 박스의 자식1</div>
+        <div class="child2">첫번째 박스의 자식2</div>
+    </div>
+    <div class="box2">
+        <div class="child1">두번째 박스의 자식1</div>
+        <div class="child2">두번째 박스의 자식2</div>
+    </div>
+    <div class="box3">
+        <div class="child1">세번째 박스의 자식1</div>
+        <div class="child2">세번째 박스의 자식2</div>
+    </div>
+
+</body>
+</html>

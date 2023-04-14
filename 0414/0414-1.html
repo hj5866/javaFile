@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱태그(semantic tab)</title>
+    <style>
+        .wrap{
+            width:1000px;
+            height: 800px;
+            margin:0 auto; /*브라우저의 가운데로 정렬*/
+            background-color: #eee;
+        }
+        header{
+            width:980px;
+            height: 100px;
+            margin:0 auto; /*부모 영역의 가운데로 정렬*/
+            background-color: #f3e8ff;
+        }
+        section{
+            width:980px;
+            height: 600px;
+            margin:0 auto; /*부모 영역의 가운데로 정렬*/
+            background-color: #fafad3;
+        }
+        footer{
+            width:980px;
+            height: 100px;
+            margin:0 auto; /*부모 영역의 가운데로 정렬*/
+            background-color: #daf5ff;
+        }
+        .logo{
+            width:200px;
+            height: 50px;
+            margin:0 auto; 
+            background-color: red;
+            color:#fff;
+            text-align: center; /*글자 가운데로 정렬*/
+        }
+        nav{
+            width:900px;
+            height: 30px;
+            margin:0 auto; 
+            background-color: aqua;
+            margin-top: 10px; /*위쪽여백:10픽셀*/
+            text-align: center;
+        }
+        article{
+            width:31.2%;
+            height:580px;
+            float:left; /*가로로 나열*/
+            background-color: #ffdeb4;
+            margin:10px; /*여백:10픽셀*/
+        }
+        aside{
+            width: 94%;
+            height: 96%;
+            background-color: aquamarine;
+            margin: 10px;
+        }
+        address{
+            width: 960px;
+            height: 60px;
+            margin: 0 auto;
+            background-color: #666;
+            text-align: center;
+            color: #fff;
+        }
+        span{
+            width: 960px; 
+            height: 30px;
+            margin: 0 auto;
+            background-color: #999;
+            text-align: center;
+            color: #fff; /*글자색*/
+            display: block; /*블록요소로 변경함*/
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="logo">로고</div>
+            <!-- nav:메뉴 -->
+            <nav>내비게이션</nav>
+        </header>
+        <section>
+            <article>
+                본문 내용
+            </article>
+            <article>
+                본문내용
+            </article>
+            <article>
+                <aside>팝업배너,중요도가 낮은 컨텐츠</aside>
+            </article>
+        </section>
+        <footer>
+            <address>주소</address>
+            <span>카피라이트</span>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 요소와 인라인 요소</title>
+    <style>
+        /* div,p 블록요소: 요소가 다 적용이 잘 되고, 가로값 지정 안해주면 부모객체 크기만큼 자리차지 */
+        div{
+            width: 550px;
+            height: 150px;
+            text-align: center;
+            font-size: 20px;
+            background-color:yellow;
+            /* 블록요소를 인라인 요소로 변환 */
+            display: inline;
+        }
+        p{
+            width: 550px;
+            background-color: aquamarine;
+        }
+        a{
+            /*a,span 인라인요소: 요소가 적용이 안되고, 요소지정 해줘도 안바뀜.  */
+            width: 500px;
+            height: 100px;
+            background-color: orange;
+            color: #fff;
+            font-size: 30px;
+            /* 인라인 요소를 블록 요소로 변환 */
+            display: block;
+        }
+        span{
+            width: 300px;
+            height: 50px;
+            background-color: blue;
+            color: #fff;
+            font-size: 30px;
+        }
+        /* 블록요소는 가로길이를 지정하지 않으면 부모객체의 가로크기만큼 자리를 차지한다. 자동 줄바꿈 된다.
+        마진이나 패딩 적용이 잘 된다. */
+        /* 인라인요소는 글자길이 만큼만 요소의 크기가 지정된다. 자동 줄바꿈 기능 없음.
+        마진이나 패딩 적용이 안된다. */
+
+    </style>
+</head>
+<body>
+    <div>나는 블록요소당!</div>
+    <p>나는 블록요소야</p>
+    <a href="">나는 인라인 요소야</a>
+    <span>나도 인라인 요소란다</span>
+</body>
+</html>

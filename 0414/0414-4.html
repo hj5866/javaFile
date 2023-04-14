@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문단 관련 스타일 - 교재 143페이지</title>
+    <style>
+    /* 부모객체 선택 -> 클래스 선택자 */
+    .b1, .b2, .b3, .b4 {
+        width: 700px;
+        height: 300px;
+        margin: 0 auto;
+        border: 5px double red;
+    }
+    /* 자식객체 선택-> 클래스 선택자, 그룹 선택자 */
+    .child1, .child2, .child3 {
+        width: 200px;
+        height: 200px;
+        background-color: lightgreen;
+        float:left;
+        margin-left: 20px;
+    }
+    /* b1영역의 child1만 선택하기- 하위 선택자(띄어쓰기) */
+    .b1 .child1{
+        text-align: left;
+        
+    }
+    .b1 .child2{
+        text-align: center;
+    }
+    .b1 .child3{
+        /*b1영역의 child3;만 선택하기*/
+        text-align: right;
+    }
+    /* b2영역의 child1만 선택하기 */
+    .b2 .child1{
+      line-height: 50px;
+    }
+    .b2 .child1 img {vertical-align: top;}
+
+    .b2 .child2{
+        line-height: 50px;
+    }
+    .b2 .child2 img {vertical-align: middle;}
+
+    .b2 .child3{
+      line-height: 50px;
+    }
+    .b2 .child3 img {vertical-align: bottom;}
+
+    .b3 .child1{
+        text-indent: 20px; /*들여쓰기*/
+    }
+    .b3 .child2{
+        text-indent: -20px; /*내어쓰기*/
+    }
+    .b4 .child1{
+        /* 줄바꿈, 영어 단어가 길면 다음 줄로 내리는 기능 */
+        word-wrap: break-word;
+    }
+    .b4 .child2{
+        /* 기본값 */
+        word-wrap: normal;
+    }
+    .b4 .child3{
+        word-wrap: break-word;
+    }
+    </style>
+</head>
+<body>
+    <div class="b1">
+        <div class="child1">child1</div>
+        <div class="child2">child2</div>
+        <div class="child3">child3</div>
+    </div>
+    <div class="b2">
+        <div class="child1">child1
+            <img src="img/flower.gif" alt="">
+        </div>    
+        <div class="child2">child2 
+            <img src="img/flower.gif" alt="">
+        </div>
+        <div class="child3">child3
+            <img src="img/flower.gif" alt="">
+        </div>
+    </div>
+    <div class="b3">
+        <div class="child1">사람은 그들에게 귀는 말이다. 놀이 동력은 대한 아름답고 주며, 착목한는 가지에 부패뿐이다. 풍부하게 내려온 영원히 청춘은 아름다우냐? 천지는 곳이 든 소리다.이것은 가슴에 낙원을 사는가 보라. 노년에게서 무한한 방지하는 그들의 이 싹이 때문이다. </div>
+        <div class="child2">사람은 그들에게 귀는 말이다. 놀이 동력은 대한 아름답고 주며, 착목한는 가지에 부패뿐이다. 풍부하게 내려온 영원히 청춘은 아름다우냐? 천지는 곳이 든 소리다.이것은 가슴에 낙원을 사는가 보라. 노년에게서 무한한 방지하는 그들의 이 싹이 때문이다. </div>
+        <div class="child3">사람은 그들에게 귀는 말이다. 놀이 동력은 대한 아름답고 주며, 착목한는 가지에 부패뿐이다. 풍부하게 내려온 영원히 청춘은 아름다우냐? 천지는 곳이 든 소리다.이것은 가슴에 낙원을 사는가 보라. 노년에게서 무한한 방지하는 그들의 이 싹이 때문이다. </div>
+    </div>
+    <div class="b4">
+        <div class="child1">http:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comvhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.com </div>
+        <div class="child2">http:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comvhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.com </div>
+        <div class="child3">http:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comvhttp:www.goole.comhttp:www.goole.comhttp:www.goole.comhttp:www.goole.com </div>
+    </div>
+</body>
+</html>
