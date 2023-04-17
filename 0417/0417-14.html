@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 교재218p</title>
+    <script src="js/prefixfree.min.js"></script>
+    <style>
+        body{margin-left: 100px;}
+        div{
+            width: 500px;
+            padding: 15px;
+            background: #78a;
+            border: 5px solid rgba(0,0,0,0.5);
+            font:21px times;
+        }
+        .a1{
+            transform: translate(0,0);
+            background: #89b;
+            transition: all 0.5s;
+        }
+        .a1:hover{
+            /* 오른쪽으로 30픽셀, 아래로 20픽셀 이동 */
+            transform: translate(500px, 500px);
+        }
+        .a2{
+            transform: rotate(0deg);
+            background: #9ac;
+            transition: all 0.5s;
+        }
+        .a2:hover{
+            transform: rotate(120deg);
+        }
+        .a3{
+            transform: scale(1,1);
+            background: #89b;
+            transition: all 0.5s;
+        }
+       .a3:hover{
+            transform: scale(0.7,1.3);
+        }
+        .a4{
+            transform: skew(1deg,1deg);
+            background: #89b;
+            transition: all 0.5s;
+        }
+        .a4:hover{
+            transform: skew(15deg,10deg);
+        }
+        .a5{
+            transform: matrix(1,0,0,1,1,1);
+            background: #89b;
+            transition: all 0.5s;
+        }
+        .a5:hover{
+            transform: matrix(1.2,-0.1,0,1.2,80,30);
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">가로로 30px이동, 세로로 20px 이동</div>
+    <div class="a2">50도 오른쪽으로 회전</div>
+    <div class="a3">가로크기 0.7배, 세로크기 1.3배(상대크기)</div>
+    <div class="a4">기울임 15도, 10도</div>
+    <div class="a5">가로크기100%, 기울임 세로 -0.1,기울임 가로0, 세로크기100%, 가로이동0,세로이동0
+        순서대로 한꺼번에 작성
+    </div>
+</body>
+</html>

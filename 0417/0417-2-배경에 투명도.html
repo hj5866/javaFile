@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색에 투명도 설정</title>
+    <style>
+        body{
+            background-image:url(img/bg.jpg);
+        }
+        div{
+            width: 200px; height: 200px;
+            border:1px solid #fff;
+            float: left;
+            margin: 20px;
+            color: #fff;
+        }
+        /* 클래스 선택자 */
+        /* r:red ,g:green, b:blue, a:alpha(투명도) */
+        .a1{background-color: rgba(0,0,0,1);}
+        .a2{background-color: rgba(0,0,0,0.7);}
+        .a3{background-color: rgba(0,0,0,0.5);}
+        .a4{background-color: rgba(0,0,0,0.2);}
+    </style>
+</head>
+<body>
+    <div class="a1">투명도 100%</div>
+    <div class="a2">투명도 70%</div>
+    <div class="a3">투명도 50%</div>
+    <div class="a4">투명도 20%</div>
+</body>
+</html>

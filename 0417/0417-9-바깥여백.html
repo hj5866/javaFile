@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바깥여백(margin)194p</title>
+    <style>
+        div{
+            width: 300px; height: 300px;
+            border: 1px solid #000;
+            background-clip: content-box;
+            background-color: lawngreen;
+            margin: 10px;
+        }
+        /* margin:명시해도 되고,명시 안할땐 시계방향으로 쓴다. */
+        /* 패딩을 하면 패딩한만큼 크기가 커짐.  */
+        .a1{margin:0;}
+        .a2{margin-left: 50px;}
+        .a3{margin-right: 50px;}
+        .a4{margin-top: 100px;}
+        .a5{margin-bottom: 70px;}
+        .a6{margin:0 40px;}
+        .a7{margin:40px 0;}
+        .a8{margin:60px;}
+        .a9{margin:50px 30px 40px 20px;}
+        .a10{margin:30px 10px 25px;}
+    </style>
+</head>
+<body>
+    <div class="a1">바깥여백 없음</div>
+    <div class="a2">왼쪽 바깥여백 50픽셀</div>
+    <div class="a3">오른쪽 바깥여백 50픽셀</div>
+    <div class="a4">위쪽 바깥여백 100픽셀</div>
+    <div class="a5">아래쪽 바깥여백 70픽셀</div>
+    <div class="a6">왼쪽오른쪽 바깥여백 40픽셀</div>
+    <div class="a7">위아래 바깥여백 40픽셀</div>
+    <div class="a8">상하좌우 바깥여백 60픽셀</div>
+    <div class="a9">위:50-오른쪽:30-아래:40-왼쪽:20픽셀</div>
+    <div class="a10">위:30-좌우:10-아래:25픽셀</div>
+</body>
+</html>

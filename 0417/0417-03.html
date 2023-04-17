@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 이미지 넣기 167p</title>
+    <style>
+        /* 태그 선택자: div를 쓰는 a1~a10은 전부 적용되는 스타일속성 */
+        div{
+            width: 500px; height: 600px;
+            background-image: url(img/dam.JPG);
+            margin: 10px;
+            font-size: 30px;
+            text-align: center;
+            color: #fff;
+            text-shadow: 1px 1px 1px #000;
+            background-color: #eee;
+        }
+        /* 클래스 선택자: 각자에게 적용되는 속성*/
+        .a2{
+            background-repeat: no-repeat;
+        }
+        .a3{
+            background-repeat: repeat-x;
+        }
+        .a4{
+            background-repeat: repeat-y;
+        }
+        .a5{
+            background-repeat: no-repeat;
+            background-position: top right;
+        }
+        .a6{
+            background-repeat: no-repeat;
+            background-position: bottom left;
+        }
+        .a7{
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+        .a8{
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .a9{
+            background-repeat: no-repeat;
+            background-size: 75%;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- class로 이름 붙여주고 각자 속성 부여가능 -->
+    <div class="a1">작은 배경이미지</div>
+    <div class="a2">배경이미지 반복 안함</div>
+    <div class="a3">배경이미지 가로 반복</div>
+    <div class="a4">배경이미지 세로 반복</div>
+    <div class="a5">배경이미지 오른쪽 배치</div>
+    <div class="a6">배경이미지 왼쪽아래 배치</div>
+    <div class="a7">배경이미지 오른쪽아래 배치</div>
+    <div class="a8">배경이미지 정가운데 배치</div>
+    <div class="a9">배경이미지 늘리기</div>
+    <div class="a10">배경이미지</div>
+</body>
+</html>

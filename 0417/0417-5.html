@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 이미지 위치 설정하기 178p</title>
+    <style>
+        div{
+            width: 300px; height: 300px;
+            border: 10px solid rgba(255,165,0,0.5);
+            margin: 10px;
+            padding: 50px;
+            background-image: url(img/hc.png);
+            background-size: 200px;
+            background-repeat: no-repeat;
+        }
+        .a1{
+            background-origin:border-box;
+        }
+        .a2{
+
+            background-origin:padding-box;
+        }
+        .a3{
+            background-origin:content-box;
+        }
+        .a4{
+            background-clip: border-box;
+        }
+        .a5{
+            background-clip: padding-box;
+        }
+        .a6{
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>background-origin:배경 위치 시작점 지정</h1>
+    <div class="a1">배경이미지 테두리 기준</div>
+    <div class="a2">배경이미지 테두리 제외 상자 기준</div>
+    <div class="a3">배경이미지 테두리 제외 여백 제외 상자 기준</div>
+    <h1>background-clip:배경이미지 잘라낼 위치 지정</h1>
+    <div class="a4">배경이미지 테두리 포함한 영역에 배치</div>
+    <div class="a5">배경이미지 테두리 제외한 영역에 배치</div>
+    <div class="a6">배경이미지 테두리 제외 여백 제외한 영역에 배치</div>
+</body>
+</html>

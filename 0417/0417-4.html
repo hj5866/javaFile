@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경이미지 크기 지정하기 175p</title>
+    <style>
+        div{
+            width: 500px; height: 500px;
+            background-image: url(img/bg.jpg);
+            margin: 10px;
+        }
+        .a1{
+            /* cover는 부모영역을 꽉 채움, 짧은 길이에 맞춤(이미지가 세로로 길어서 가로면적이 남으면,
+            가로로 남은 면적을 채우고 남는 새로길이 만큼 이미지를 자른다) */
+            background-size: cover;
+        }
+           /* contain은 부모영역에 이미지의 긴 길이쪽을 맞춤(여백 생김)*/
+        .a2{
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: antiquewhite;
+        }
+        .a3{
+            /*배경이미지의 비율이 깨질 수 있음*/
+            background-size: 100% 100%;
+        }
+        .a4{
+            /* 원래 배경이미지 크기보다 크게 하면 해상도 깨질 수 있음 주의 */
+            background-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">배경이미지 cover</div>
+    <div class="a2">배경이미지 contain</div>
+    <div class="a3">배경이미지 100%</div>
+    <div class="a4">배경이미지 150%</div>
+    <div class="a5">배경이미지 보통</div>
+</body>
+</html>

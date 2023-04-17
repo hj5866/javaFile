@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1차원 메뉴-오뚜기몰 메뉴</title>
+    <style>
+        /* 태그 선택자 */
+        h1{ text-align: center;}
+        nav{
+            width: 800px;
+            height: 50px;
+            border: 1px solid #ddd;
+            margin: 0 auto;
+        }
+        /* 하위선택자 - 띄어쓰기 */
+        nav ul li{
+            float:left;
+            margin:5px 50px;
+            list-style: none; /*글머리기호 없앰*/
+        }
+        nav ul li a {
+            font-weight: bold;
+            text-decoration: none; /*밑줄 없앰*/
+            color:#111;
+        }
+        /* a태그에 마우스 오버했을 때 글자색 변경 */
+        nav ul li a:hover{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>오뚜기몰 글로벌 내비게이션</h1>
+    <nav>
+        <ul>
+            <li><a href="#">신제품</a></li>
+            <li><a href="#">hey!</a></li>
+            <li><a href="#">이벤트</a></li>
+            <li><a href="#">브랜드관</a></li>
+            <li><a href="#">베스트</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
